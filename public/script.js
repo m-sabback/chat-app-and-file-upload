@@ -27,7 +27,7 @@ form.addEventListener("submit", async (e) => {
         console.log(data.filename)
       setTimeout(()=>{
         displayImage(data.filename);
-      }, 3000)
+      }, 1000)
     }
   } catch (error) {
     console.log("Error" + error);
