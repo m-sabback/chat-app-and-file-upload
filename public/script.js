@@ -1,4 +1,6 @@
-const socket = new WebSocket(`ws://${window.location.host}`);
+// Automatically switch between secure (wss) and unsecure (ws) protocols
+const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+const socket = new WebSocket(`${protocol}//${window.location.host}`);
 const form = document.getElementById("form");
 
 const textInput = document.getElementById("text-input");
